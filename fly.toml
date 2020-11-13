@@ -1,0 +1,27 @@
+# fly.toml file generated for appkata-mqtt on 2020-11-11T15:22:06Z
+
+app = "appkata-mqtt"
+
+# [build]
+#   image = "eclipse-mosquitto"
+
+
+[[services]]
+  internal_port = 1883
+  protocol = "tcp"
+
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+
+  [[services.ports]]
+    handlers = [ ]
+    port = "10000"
+
+  [[services.tcp_checks]]
+    interval = 10000
+    timeout = 2000
+
+[[mounts]]
+source="mosquitto_data"
+destination="/mosquitto/data"
