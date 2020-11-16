@@ -94,7 +94,7 @@ It'll prompt you for a password (twice) and generate out password file. If you w
 
 This is where we use `mkcert`. In one command, we'll ask it to generate 
 
-```
+```cmd
 mkcert -key-file certs/mqtt-server.key -cert-file certs/mqtt-server.crt appkata-mqtt.fly.dev
 ```
 
