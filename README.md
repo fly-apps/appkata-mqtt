@@ -84,7 +84,7 @@ Then we are on to password configuration: we require them and the password file 
 
 Let's create that password file. This is simply a matter of coming up with a username and password and then running
 
-```
+```cmd
 mosquitto_passwd -c ./passwd username
 ```
 
@@ -102,7 +102,7 @@ This will create a set of certificates for our server at `appkata-mqtt.fly.dev` 
 
 As mkcert generates its own CA root, to use these certificates, we need a copy of that root.
 
-```
+```cmd
 cp "$(mkcert -CAROOT)/rootCA.pem" certs/rootCA.pem
 ```
 
@@ -112,7 +112,7 @@ This set of three files will allow the server to use TLS. Incoming clients will 
 
 With the Mosquitto configuration done, we now need to prepare the Fly configuration. The first part of this is creating the volume to store the persistent data. We've already mentioned the directory name in `mosquitto.conf` and the persistence location setting. Now we need to create a Fly disk volume to hold that data in the region where the app will deploy. We got that information when we initialized the app at the start. We'll make a `mosquitto_data` volume.
 
-```
+```cmd
 fly volumes create mosquitto_data --region lhr
 ```
 
