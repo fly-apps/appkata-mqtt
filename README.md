@@ -172,10 +172,7 @@ Now type something and hit return and it should show up in the sub terminal. You
 
 ## Discuss
 
-* You can discuss this example on its dedicated [community.fly.io]() topic.
-
-
-
+* You can discuss this example on its dedicated [community.fly.io](https://community.fly.io/t/appkata-mqtt/390) topic.
 
 
 
