@@ -2,6 +2,8 @@
 
 Run your own MQTT server for event-based messaging on Fly
 
+[Read this guide on Fly.](https://fly.io/docs/app-guides/mqtt/)
+
 <!---- cut here --->
 
 ## Rationale
